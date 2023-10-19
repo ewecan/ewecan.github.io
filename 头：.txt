@@ -1,3 +1,0 @@
-头：
-{"type":"saveSettings","wifi_ssid":"Sichiray307","wifi_pass":"huihui1213","sensor_name":"sHead","sensor_id":"1","mocap_server": "127.0.0.1","mocap_server_port": "7755"}
-
