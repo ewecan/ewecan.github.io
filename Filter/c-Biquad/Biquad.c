@@ -1,4 +1,4 @@
-#include "Filter.h"
+#include "Biquad.h"
 
 void biquad_setType(bq_coeff_p coeff_p, uint8_t filter_type)
 {
