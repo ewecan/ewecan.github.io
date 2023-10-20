@@ -1,0 +1,1 @@
+pyinstaller  -i ./resource/logo.ico -F  -w FilterUI.py

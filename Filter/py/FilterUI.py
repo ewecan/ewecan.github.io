@@ -73,13 +73,10 @@ def button1CB():
         z1 = x;
     }}
     """)
-        UIShow("""\treturn output\n}""")
+        UIShow("""\treturn output;\n}""")
 
     else:
         UIShow("输入错误")
-    
-
-
 
 #******************************* UI ***********************************
 
