@@ -7,15 +7,17 @@
 
 #include <math.h>
 
-class OnePole {
+class OnePole
+{
 public:
-    OnePole() {a0 = 1.0; b1 = 0.0; z1 = 0.0;};
-    OnePole(double Fc) {z1 = 0.0; setFc(Fc);};
+    OnePole();
+    OnePole(double Fc);
     ~OnePole();
+    
     void setFc(double Fc);
     float process(float in);
-    
-protected:    
+
+protected:
     double a0, b1, z1;
 };
 
