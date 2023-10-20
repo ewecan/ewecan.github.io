@@ -1,10 +1,16 @@
 import dearpygui.dearpygui as dpg
 import numpy as np
 import scipy.signal
+import re
 
 serlist = ["低通 LowPass","高通 HighPass","带通 BandPass","带阻 BandStop" ]
 
 # **************************** 回调函数 ****************************
+def is_number(string):
+    pattern = r'^[-+]?[0-9]*\.?[0-9]+$'
+    return re.match(pattern, string) is not None
+
+
 def UIDebug(text):
     dpg.set_value("textDebugt", dpg.get_value("textDebugt") + "\n" + text)
 def UIShow(text):
@@ -13,12 +19,26 @@ def UIShow(text):
 def button1CB():
     dpg.set_value("textOut", "")
     dpg.configure_item("button1", show=True)              # 隐藏开始按钮
-    
-    if dpg.get_value("textOrder").isdigit() and dpg.get_value("textFreqs").isdigit() and  dpg.get_value("textRate").isdigit() and dpg.get_value("textWidth").isdigit():
-        order=int(dpg.get_value("textOrder"))
-        freqs=int( dpg.get_value("textFreqs"))
-        rate= int(dpg.get_value("textRate") )
-        width = int(dpg.get_value("textWidth"))
+     
+    # 判断数字/小数
+    isNum = False
+    try:
+        order=float(dpg.get_value("textOrder"))
+        freqs=float( dpg.get_value("textFreqs"))
+        rate= float(dpg.get_value("textRate") )
+        width = float(dpg.get_value("textWidth"))
+        isNum = True
+      
+    except ValueError:
+        isNum = False
+        print("无法将字符串转换为浮点数")
+
+    if isNum == True :
+        order=float(dpg.get_value("textOrder"))
+        freqs=float( dpg.get_value("textFreqs"))
+        rate= float(dpg.get_value("textRate") )
+        width = float(dpg.get_value("textWidth"))
+
         type= dpg.get_value("comboFilter")
         if(type==serlist[0]):
             type="lowpass"
