@@ -1,0 +1,12 @@
+..\obj\pid_c_stm32.o: ..\STM32F10x_DSP_Lib\src\PID_C_stm32.c
+..\obj\pid_c_stm32.o: ..\USER\stm32f10x.h
+..\obj\pid_c_stm32.o: ..\CORE\core_cm3.h
+..\obj\pid_c_stm32.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\pid_c_stm32.o: ..\USER\system_stm32f10x.h
+..\obj\pid_c_stm32.o: ..\USER\stm32f10x_conf.h
+..\obj\pid_c_stm32.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\pid_c_stm32.o: ..\USER\stm32f10x.h
+..\obj\pid_c_stm32.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\pid_c_stm32.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\pid_c_stm32.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\pid_c_stm32.o: ..\STM32F10x_DSP_Lib\inc\stm32_dsp.h
